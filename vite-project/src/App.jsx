@@ -1,9 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import TextInput from "./TextInput";
-import Counter from "./counter";
+// import { useState } from "react";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
+// import TextInput from "./TextInput";
+// import Counter from "./counter";
+import Cart from "./Cart";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -31,7 +31,8 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
       {/* <TextInput /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <Cart />
     </>
   );
 }
