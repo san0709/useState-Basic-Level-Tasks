@@ -3,7 +3,8 @@
 // import viteLogo from "/vite.svg";
 // import TextInput from "./TextInput";
 // import Counter from "./counter";
-import Cart from "./Cart";
+// import Cart from "./Cart";
+import Objects from "./Objects";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -32,7 +33,8 @@ function App() {
       </p> */}
       {/* <TextInput /> */}
       {/* <Counter /> */}
-      <Cart />
+      {/* <Cart /> */}
+      <Objects />
     </>
   );
 }
