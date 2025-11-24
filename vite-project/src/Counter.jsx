@@ -1,14 +1,20 @@
-import React from "react";
 import { useState } from "react";
 
-function counter() {
+function Counter() {
   const [count, setCount] = useState(0);
+  function add() {
+    setCount((prevCount) => prevCount + 1);
+  }
+  function subtract() {
+    setCount((prevCount) => prevCount - 1);
+  }
+
   return (
     <>
-      <button>-</button>
+      <button onClick={subtract}>-</button>
       <p>{count}</p>
-      <button>+</button>
+      <button onClick={add}>+</button>
     </>
   );
 }
-
+export default Counter;
