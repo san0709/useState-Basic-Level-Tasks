@@ -4,8 +4,8 @@
 // import TextInput from "./TextInput";
 // import Counter from "./counter";
 // import Cart from "./Cart";
-import Objects from "./Objects";
-
+// import Objects from "./Objects";
+import Form from "./Form";
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -34,7 +34,8 @@ function App() {
       {/* <TextInput /> */}
       {/* <Counter /> */}
       {/* <Cart /> */}
-      <Objects />
+      {/* <Objects /> */}
+      <Form />
     </>
   );
 }
