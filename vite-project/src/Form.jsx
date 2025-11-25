@@ -15,6 +15,13 @@ export default function Form() {
   });
   const keys = Object.keys(userDetails);
 
+  function changeHandler(e) {
+    const nameDetails = e.target.name;
+    const valueDetails =
+      e.target.value === "checkbox" ? e.target.checked : e.target.value;
+    SetUserDetails({ ...userDetails, [nameDetails]: valueDetails });
+  }
+
   return (
     <>
       <table>
@@ -53,20 +60,43 @@ export default function Form() {
       </table>
       <div>
         <label htmlFor="genderMale">
-          <input name="Gender" id="genderMale" type="radio" />
+          <input
+            name="Gender"
+            id="genderMale"
+            type="radio"
+            checked={userDetails.Gender == "Male"}
+            value="Male"
+            onChange={changeHandler}
+          />
           Male
         </label>
         <label htmlFor="genderFemale">
-          <input name="Gender" id="genderFemale" type="radio" />
+          <input
+            name="Gender"
+            id="genderFemale"
+            type="radio"
+            checked={userDetails.Gender == "Female"}
+            value="Female"
+            onChange={changeHandler}
+          />
           Female
         </label>
       </div>
       <label htmlFor="checkbox">
-        <input id="checkbox" name="isMarried" type="checkbox" /> Is Married
+        <input
+          id="checkbox"
+          name="isMarried"
+          type="checkbox"
+                  checked={userDetails.isMarried}
+                  
+          onChange={changeHandler}
+          value="Yes"
+        />
+        Is Married
       </label>
       <label htmlFor="select-country">
         Choose your Country :
-        <select name="Country" id="select-country">
+        <select name="Country" id="select-country" onChange={changeHandler}>
           <option>India</option>
           <option>UK</option>
           <option>USA</option>
